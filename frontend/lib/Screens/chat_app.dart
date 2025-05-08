@@ -1,9 +1,23 @@
+import 'dart:io';
+
+import 'package:chat_app/widgets/WebSocketService.dart';
 import 'package:flutter/material.dart';
 
-class ChatScreen extends StatelessWidget {
-  const ChatScreen({super.key});
+class ChatScreen extends StatefulWidget {
+  const ChatScreen({super.key}); // ✅ Constructor inside the widget class
 
   @override
+  State<ChatScreen> createState() => _ChatScreen(); // ✅ Correct method name: createState()
+}
+
+class _ChatScreen extends State<ChatScreen> {
+  final WebSocketService socketService = WebSocketService();
+  @override
+  void initState() {
+    super.initState();
+    socketService.connect();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF121212), // Dark background
@@ -19,9 +33,7 @@ class ChatScreen extends StatelessWidget {
                   () => Navigator.pushReplacementNamed(context, '/chatuser'),
             ),
             const CircleAvatar(
-              backgroundImage: AssetImage(
-                'https://e7.pngegg.com/pngimages/550/997/png-clipart-user-icon-foreigners-avatar-child-face.png',
-              ),
+              backgroundImage: AssetImage('assets/images/user.png'),
             ),
             const SizedBox(width: 8),
             Column(
@@ -116,18 +128,23 @@ class ChatScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 8),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 12,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Color(0xFF7C4DFF),
-                    borderRadius: BorderRadius.circular(24),
-                  ),
-                  child: const Text(
-                    "Send",
-                    style: TextStyle(color: Colors.white),
+                InkWell(
+                  onTap: () {
+                    socketService.sendMessage("mihir prajapati");
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 12,
+                    ),
+                    decoration: BoxDecoration(
+                      color: Color(0xFF7C4DFF),
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                    child: const Text(
+                      "Send",
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ],

@@ -25,9 +25,7 @@ class ChatHomeScreen extends State<ChatUserHome> {
           title: Row(
             children: [
               CircleAvatar(
-                backgroundImage: AssetImage(
-                  'https://e7.pngegg.com/pngimages/550/997/png-clipart-user-icon-foreigners-avatar-child-face.png',
-                ),
+                backgroundImage: AssetImage('assets/images/user.png'),
                 onBackgroundImageError: (_, __) {
                   print("Image load failed");
                 },
@@ -128,7 +126,7 @@ class UserTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: const CircleAvatar(
-        backgroundImage: AssetImage('assets/user.png'),
+        backgroundImage: AssetImage('assets/images/user.png'),
       ),
       title: Text(name, style: const TextStyle(fontWeight: FontWeight.bold)),
       subtitle: Text(email),
