@@ -36,7 +36,8 @@ ChatMates is a real-time full-stack chat application built using **Flutter** (fr
 
 | Login Page | Chat UI |
 |------------|---------|
-| ![Login](frontend/assets/images/login.png) | ![Chat](frontend/assets/images/chat.png) |
+| ![Login]("C:\Users\User\OneDrive\Pictures\Screenshots\chatmates_loginpage.png") | ![Create]("C:\Users\User\OneDrive\Pictures\Screenshots\chatmates_createaccount.png") |
+| ![User]("C:\Users\User\OneDrive\Pictures\Screenshots\chatmates_user.png") |  ![Screen]("C:\Users\User\OneDrive\Pictures\Screenshots\chatmates_chatscreen.png") |
 
 ---
 
