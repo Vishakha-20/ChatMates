@@ -1,52 +1,49 @@
-# 💬 ChatApp
+# 💬 ChatMates
 
-A real-time chat application built with **Flutter** for the frontend and **Spring Boot** for the backend. This app allows **multiple users** to sign in, register, and communicate in real-time using **WebSocket**.
+ChatMates is a real-time full-stack chat application built using **Flutter** (frontend) and **Spring Boot** with **WebSocket** (backend). It supports live messaging, user login/signup, and seamless WebSocket communication powered by STOMP over SockJS.
 
 ---
 
 ## 🚀 Features
 
-- 🔐 User Authentication (Login & Signup)
-- 🧑‍🤝‍🧑 Multi-user support
-- 📡 Real-time messaging using WebSocket
-- 💻 Built with Flutter (Frontend) & Spring Boot (Backend)
+- ✅ Real-time messaging via WebSockets (STOMP over SockJS)
+- ✅ User authentication (login/signup)
+- ✅ Responsive UI built in Flutter
+- ✅ Spring Security (JWT-authenticated APIs)
+- ✅ MySQL database integration
+- ✅ Modular backend with REST + WebSocket support
+- ✅ Cross-platform support (Android, Windows, etc.)
 
 ---
 
-## 📱 Frontend - Flutter
+## 🛠️ Tech Stack
 
-
-- Login & Signup screens with form validation
-- Real-time chat interface
-- WebSocket integration for instant messaging
-
-### 🛠️ Packages Used (Flutter)
-- `web_socket_channel` – WebSocket support
-- `http` – API calls
-
----
-
-## ⚙️ Backend - Spring Boot
-
-- REST APIs for user registration & login
-- WebSocket configuration for chat communication
-- JWT Token based authentication
-
-
-### 📦 Dependencies (Spring Boot)
-- `spring-boot-starter-web`
-- `spring-boot-starter-websocket`
-- `spring-boot-starter-security`
-- `spring-boot-starter-data-jpa`
-- Database: (H2/MySQL/PostgreSQL – as per your setup)
+| Layer      | Technology                   |
+|------------|------------------------------|
+| Frontend   | Flutter (Dart)               |
+| Backend    | Spring Boot (Java 21)        |
+| WebSocket  | STOMP over SockJS            |
+| Database   | MySQL                        |
+| Security   | Spring Security + JWT        |
+| Build Tool | Maven                        |
+| IDE        | VS Code + IntelliJ/Eclipse   |
 
 ---
 
-## 🧪 How to Run
+## 📸 Screenshots
 
-### 💻 Backend (Spring Boot)
+> Place your actual screenshots inside `frontend/assets/images/` and link them here.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/chatapp.git
-   cd chatapp/backend
+| Login Page | Chat UI |
+|------------|---------|
+| ![Login](frontend/assets/images/login.png) | ![Chat](frontend/assets/images/chat.png) |
+
+---
+
+## ⚙️ Local Setup Instructions
+
+### 📁 1. Clone the Repository
+
+```bash
+git clone https://github.com/Vishakha-20/ChatMates.git
+cd ChatMates
